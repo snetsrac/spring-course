@@ -1,18 +1,11 @@
-## Getting Started
+## Spring configuration using XML
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This simple application demonstrates the use of an XML config file to configure and initialize a Spring application context. This allows for inversion of control by decoupling the configuration from the java code. The Spring framework uses the config information to initialize and manage the lifecycle of objects, called beans in this case. The config file defines which java classes will be used to generate each bean.
 
-## Folder Structure
+### Dependency Injection
 
-The workspace contains two folders by default, where:
+Bean dependencies can be defined in multiple ways. First, a dependency can be injected as an argument to the constructor along with a corresponding <constructor-arg> element within the <bean> element. This allows for specific implementations to be swapped out without requiring modification of the code. A second method is to define a setter method for the class. A corresponding <property> element with nested <value> element is defined in the config file. The setter method must be of the form "setMethodName", which corresponds to a property with a name="methodName" attribute. A third method is to use a <property> element with a ref attribute with the id of the bean that is a dependency.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Property Literals
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Literal properties can also be defined by using a value attribute on the <property> element. Additionally, literals can be moved into a separate file and loaded with a <context:property-placeholder> element.
