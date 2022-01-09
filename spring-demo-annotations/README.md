@@ -14,4 +14,8 @@ Dependencies can be injected in multiple ways using the @Autowired annotation. T
 
 If there are multiple dependencies that implement the same required interface, then it is necessary to use the ```@Qualifier("beanName")``` annotation to specify a single implementation. The default bean ID is the name of the component class with a lower case first letter, unless both the first and second letter are capitalized, in which case the class name is used as-is. For example, the ```HappyFortuneService``` class has a default bean ID of ```happyFortuneService``` and the ```RESTFortuneService``` has a default bean ID of ```RESTFortuneService```.
 
-If using constructor injection, then the ```@Qualifier("beanName")``` annotation immediately precedes the dependency's type inside the function's argument list (```public ClassName(@Qualifier("beanName") DependencyType dependency) {} ```), otherwise it can be placed either in the same location as above or before the function signature right after the ```@Autowired``` annotation.
+If using constructor injection, then the ```@Qualifier("beanName")``` annotation immediately precedes the dependency's type inside the function's argument list (```public ClassName(@Qualifier("beanName") DependencyType dependency) {}```), otherwise it can be placed either in the same location as above or before the function signature right after the ```@Autowired``` annotation.
+
+### Bean Scope and Lifecycle
+
+Bean scope can be set using the ```@Scope("scopeType")``` annotation on the component class. Init and destroy methods are defined using the ```@PostConstruct``` and ```@PreDestroy``` annotations.
