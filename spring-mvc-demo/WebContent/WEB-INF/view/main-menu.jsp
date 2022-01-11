@@ -7,6 +7,7 @@
   </head>
   <body>
     <h2>Spring MVC Demo - Home Page</h2>
-    <a href="showForm">Hello World Form</a>
+    <p><a href="showForm">Hello World Form</a></p>
+    <p><a href="student/showForm">Student Registration Form</a></p>
   </body>
 </html>
