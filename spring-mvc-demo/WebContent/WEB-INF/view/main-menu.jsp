@@ -9,5 +9,6 @@
     <h2>Spring MVC Demo - Home Page</h2>
     <p><a href="showForm">Hello World Form</a></p>
     <p><a href="student/showForm">Student Registration Form</a></p>
+    <p><a href="customer/showForm">Customer Registration Form</a></p>
   </body>
 </html>
