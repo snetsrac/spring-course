@@ -42,6 +42,7 @@ tr:nth-child(odd) {
   padding: 5px 10px;
   margin-bottom: 15px;
   background: #ccc;
+  cursor: pointer;
 }
 
 #wrapper {

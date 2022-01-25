@@ -15,6 +15,17 @@
     </div>
     <div id="container">
       <div id="content">
+        
+        <!-- add button to navigate to add customer form -->
+
+        <a href="${pageContext.request.contextPath}/customer/showForm">
+          <button class="add-button">
+            Add Customer
+          </button>
+        </a>
+
+        <!-- add customer table -->
+
         <table>
           <thead>
             <tr>
@@ -33,6 +44,7 @@
             </c:forEach>
           </tbody>
         </table>
+
       </div>
     </div>
   </body>
