@@ -41,7 +41,12 @@
                 <td>${customer.firstName}</td>
                 <td>${customer.lastName}</td>
                 <td>${customer.email}</td>
-                <td><a href="${pageContext.request.contextPath}/customer/showForm?id=${customer.id}">Update</a></td>
+                <td>
+                  <a href="${pageContext.request.contextPath}/customer/showForm?id=${customer.id}">Update</a>
+                  |
+                  <a href="${pageContext.request.contextPath}/customer/delete?id=${customer.id}"
+                    onclick="return confirm('Are you sure you want to delete this customer?');">Delete</a>
+                </td>
               </tr>
             </c:forEach>
           </tbody>
