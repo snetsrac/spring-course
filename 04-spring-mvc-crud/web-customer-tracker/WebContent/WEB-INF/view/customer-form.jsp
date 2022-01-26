@@ -17,6 +17,7 @@
     <div id="container">
       <h3>Save Customer</h3>
       <form:form action="processForm" modelAttribute="customer" method="POST">
+        <form:hidden path="id" />
         <table>
           <tbody>
             <tr>

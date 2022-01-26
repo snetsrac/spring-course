@@ -32,6 +32,7 @@
               <th>First Name</th>
               <th>Last Name</th>
               <th>Email</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -40,6 +41,7 @@
                 <td>${customer.firstName}</td>
                 <td>${customer.lastName}</td>
                 <td>${customer.email}</td>
+                <td><a href="${pageContext.request.contextPath}/customer/showForm?id=${customer.id}">Update</a></td>
               </tr>
             </c:forEach>
           </tbody>
