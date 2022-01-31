@@ -1,0 +1,6 @@
+/home/ccarste2/spring-course/06-spring-security/spring-security-demo-07-user-roles/src/main/java/com/snetsrac/springsecuritydemo/config/SpringMvcDispatcherServletInitializer.java
+/home/ccarste2/spring-course/06-spring-security/spring-security-demo-07-user-roles/src/main/java/com/snetsrac/springsecuritydemo/config/DemoAppConfig.java
+/home/ccarste2/spring-course/06-spring-security/spring-security-demo-07-user-roles/src/main/java/com/snetsrac/springsecuritydemo/controller/LoginController.java
+/home/ccarste2/spring-course/06-spring-security/spring-security-demo-07-user-roles/src/main/java/com/snetsrac/springsecuritydemo/controller/DemoController.java
+/home/ccarste2/spring-course/06-spring-security/spring-security-demo-07-user-roles/src/main/java/com/snetsrac/springsecuritydemo/config/DemoSecurityConfig.java
+/home/ccarste2/spring-course/06-spring-security/spring-security-demo-07-user-roles/src/main/java/com/snetsrac/springsecuritydemo/config/SecurityWebAppInitializer.java
