@@ -1,5 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,10 +19,22 @@
 
   <hr>
 
-  <p>Username: <security:authentication property="principal.username" /></p>
-  <p>Role(s): <security:authentication property="principal.authorities" /></p>
+  <p>Username: <sec:authentication property="principal.username" /></p>
+  <p>Role(s): <sec:authentication property="principal.authorities" /></p>
 
   <hr>
+
+  <sec:authorize access="hasRole('ROLE_MANAGER')">
+    <p><a href="${pageContext.request.contextPath}/leaders">Click here</a> to learn about the leadership retreat.</p>
+
+    <hr>
+  </sec:authorize>
+
+  <sec:authorize access="hasRole('ROLE_ADMIN')">
+    <p><a href="${pageContext.request.contextPath}/systems">Click here</a> to learn about the systems conference.</p>
+
+    <hr>
+  </sec:authorize>
 
   <form:form action="${pageContext.request.contextPath}/logout" method="POST">
     <input type="submit" value="Logout" />
